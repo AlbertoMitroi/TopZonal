@@ -1,0 +1,77 @@
+/* Custom styles for overrides and animations (used with Tailwind) */
+@layer utilities {
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Float animation for logo */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translate(-12px, -14px) rotate(2deg) scale(1.05);
+  }
+  30% {
+    transform: translate(14px, -28px) rotate(-3deg) scale(1.1);
+  }
+  50% {
+    transform: translate(-10px, -35px) rotate(3deg) scale(1.12);
+  }
+  70% {
+    transform: translate(12px, -22px) rotate(-2deg) scale(1.08);
+  }
+  85% {
+    transform: translate(-6px, -10px) rotate(1deg) scale(1.04);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+.animate-float {
+  animation: float 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+
+/* Navbar scrolled state */
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dark #navbar.scrolled {
+  background-color: rgba(15, 23, 42, 0.95) !important; /* Using darkBg */
+}
+
+/* Mobile menu transition */
+#mobileMenu {
+  transition: all 0.3s ease;
+}
+
+/* Form focus effects */
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2); /* Using primary red */
+}
+
+/* Hover transitions */
+.transform {
+  transition: transform 0.3s ease;
+}

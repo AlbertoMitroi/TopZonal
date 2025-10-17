@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <!-- Meta tags for SEO and social sharing -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      TopZonal.ro - Platforma Premium pentru Servicii Locale în România
+    </title>
+    <meta
+      name="description"
+      content="Descoperă, compară și rezervă servicii locale verificate: stomatologie, mecanici auto și mai mult. Rezervări online, recenzii autentice și AI inteligent."
+    />
+    <meta
+      name="keywords"
+      content="servicii locale România, rezervări online, recenzii verificate, platformă servicii"
+    />
+    <meta property="og:title" content="TopZonal.ro - Servicii Locale de Top" />
+    <meta
+      property="og:description"
+      content="Conectăm utilizatori cu furnizori de încredere prin tehnologie modernă."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://topzonal.ro" />
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#EF4444", // Softer red for accents
+              secondary: "#DC2626", // Deeper red for highlights
+              neutral: "#111827", // Dark neutral for text/backgrounds
+              light: "#F9FAFB", // Light background
+              darkBg: "#0F172A", // Improved dark mode background
+              darkAccent: "#1E293B", // Softer dark accents
+            },
+          },
+        },
+        darkMode: "class",
+      };
+    </script>
+    <!-- Lucide Icons CDN for icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS for overrides and additional styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen bg-light text-neutral">
+    <!-- Navigation Bar -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div
+            class="flex items-center space-x-9 cursor-pointer"
+            onclick="scrollToSection('home')"
+          >
+            <div class="relative inline-flex items-center justify-center logo">
+              <i data-lucide="search" class="w-10 h-10 text-neutral"></i>
+              <div
+                class="absolute top-2 left-1 flex gap-0.5 transform scale-75"
+              >
+                <!-- Adjusted position and scale for overlap -->
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+              </div>
+            </div>
+            <span class="text-2xl font-bold text-neutral"
+              >TopZonal<span class="text-primary">.ro</span></span
+            >
+          </div>
+
+          <div class="hidden md:flex space-x-8 items-center">
+            <button
+              onclick="scrollToSection('home')"
+              class="text-gray-700 hover:text-primary transition font-medium"
+            >
+              Acasă
+            </button>
+            <button
+              onclick="scrollToSection('features')"
+              class="text-gray-700 hover:text-primary transition font-medium"
+            >
+              Funcționalități
+            </button>
+            <button
+              onclick="scrollToSection('benefits')"
+              class="text-gray-700 hover:text-primary transition font-medium"
+            >
+              Viziune
+            </button>
+            <button
+              onclick="scrollToSection('roadmap')"
+              class="text-gray-700 hover:text-primary transition font-medium"
+            >
+              Roadmap
+            </button>
+            <button
+              onclick="scrollToSection('contact')"
+              class="text-gray-700 hover:text-primary transition font-medium"
+            >
+              Contact
+            </button>
+            <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200">
+              🌙
+            </button>
+          </div>
+
+          <button id="menuToggle" class="md:hidden text-neutral">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="md:hidden bg-white border-t border-gray-200 hidden"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <button
+            onclick="scrollToSection('home')"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Acasă
+          </button>
+          <button
+            onclick="scrollToSection('features')"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Funcționalități
+          </button>
+          <button
+            onclick="scrollToSection('benefits')"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Viziune
+          </button>
+          <button
+            onclick="scrollToSection('roadmap')"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Roadmap
+          </button>
+          <button
+            onclick="scrollToSection('contact')"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Contact
+          </button>
+          <button
+            onclick="toggleDarkMode()"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Mod Întunecat
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-32 pb-20 px-4 bg-gradient-to-br from-light to-primary/20"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center">
+          <div class="flex justify-center">
+            <div
+              class="relative inline-flex items-center justify-center logo animate-float"
+            >
+              <i data-lucide="search" class="w-32 h-32 text-neutral"></i>
+              <div
+                class="absolute top-6 left-1 flex gap-0.5 transform scale-75"
+              >
+                <!-- Adjusted for overlap -->
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+            Descoperă Servicii Locale
+            <span
+              class="block bg-gradient-to-r from-primary via-secondary to-neutral bg-clip-text text-transparent mt-2"
+            >
+              Premium în România
+            </span>
+          </h1>
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Găsește profesioniști verificați, compară oferte reale și rezervă
+            instant. De la sănătate la reparații - totul optimizat pentru tine.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+          <div
+            class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-neutral bg-clip-text text-transparent mb-2"
+            >
+              100+
+            </div>
+            <div class="text-gray-800 font-semibold mb-1">
+              Categorii Servicii
+            </div>
+            <div class="text-sm text-gray-500">De la sănătate la auto</div>
+          </div>
+          <div
+            class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-neutral bg-clip-text text-transparent mb-2"
+            >
+              24/7
+            </div>
+            <div class="text-gray-800 font-semibold mb-1">Suport AI</div>
+            <div class="text-sm text-gray-500">Asistență continuă</div>
+          </div>
+          <div
+            class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-neutral bg-clip-text text-transparent mb-2"
+            >
+              Q1 2026
+            </div>
+            <div class="text-gray-800 font-semibold mb-1">Lansare</div>
+            <div class="text-sm text-gray-500">Pilot național</div>
+          </div>
+          <div
+            class="group bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-neutral bg-clip-text text-transparent mb-2"
+            >
+              100%
+            </div>
+            <div class="text-gray-800 font-semibold mb-1">Securizat</div>
+            <div class="text-sm text-gray-500">Verificări complete</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+            Funcționalități <span class="text-primary">Premium</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Experiență utilizator revoluționară cu tehnologii de top
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="bg-gradient-to-br from-primary to-neutral text-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="search" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
+              Căutare Inteligentă
+            </h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Descoperă servicii locale cu filtre precise bazate pe locație GPS,
+              buget, disponibilitate și evaluări reale. Vizualizează rezultate
+              pe hărți interactive și compară opțiuni detaliat pentru decizii
+              informate.
+            </p>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="bg-gradient-to-br from-primary to-neutral text-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="star" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
+              Evaluări Autentice
+            </h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Accesează recenzii verificate doar de la clienți reali, combinate
+              cu date agregate din Google și Facebook pentru transparență totală
+              și încredere maximă în alegerea ta.
+            </p>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="bg-gradient-to-br from-primary to-neutral text-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="calendar" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
+              Rezervări Instant
+            </h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Gestionează programări prin calendar live cu confirmări automate
+              și sincronizare cu Google/Apple Calendar pentru o planificare fără
+              efort.
+            </p>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="bg-gradient-to-br from-primary to-neutral text-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="message-circle" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">Chat Hibrid</h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Comunică direct cu furnizorii sau folosește AI-ul nostru pentru
+              recomandări personalizate, răspunsuri rapide și asistență 24/7.
+            </p>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="bg-gradient-to-br from-primary to-neutral text-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="shield" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">
+              Verificare Strictă
+            </h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Toți furnizorii trec prin verificări riguroase cu documente
+              oficiale, asigurând calitate și siguranță pentru fiecare
+              interacțiune.
+            </p>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary transform hover:scale-105"
+          >
+            <div
+              class="bg-gradient-to-br from-primary to-neutral text-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="zap" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4">Panou Business</h3>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+              Furnizorii beneficiază de dashboard complet cu analytics în timp
+              real, programe de loialitate și tool-uri de marketing pentru
+              creștere accelerată.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section (Carousel) -->
+    <section
+      id="benefits"
+      class="py-20 px-4 bg-gradient-to-br from-neutral to-darkBg text-white"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+            Viziunea <span class="text-primary">TopZonal</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+            Transformăm piața serviciilor locale cu inovație și focus pe
+            utilizator
+          </p>
+        </div>
+
+        <div class="relative">
+          <div id="carouselContainer" class="overflow-hidden rounded-3xl">
+            <!-- Slides will be injected by JS -->
+          </div>
+
+          <button
+            id="prevSlide"
+            class="absolute left-4 top-1/3 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-full p-3 sm:p-4 transition-all duration-300 hover:scale-110"
+          >
+            <i data-lucide="chevron-left" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </button>
+          <button
+            id="nextSlide"
+            class="absolute right-4 top-1/3 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-lg rounded-full p-3 sm:p-4 transition-all duration-300 hover:scale-110"
+          >
+            <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </button>
+
+          <div id="dotsIndicator" class="flex justify-center gap-3 mt-8">
+            <!-- Dots will be injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section
+      id="roadmap"
+      class="py-20 px-4 bg-gradient-to-br from-light to-gray-100"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+            Roadmap <span class="text-primary">Strategic</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Evoluția noastră către liderul serviciilor locale
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
+        >
+          <div class="group relative">
+            <div
+              class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-6 sm:p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white"
+            >
+              <div
+                class="absolute -top-4 -left-4 bg-white text-black rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg"
+              >
+                1
+              </div>
+              <div class="mb-4 sm:mb-6">
+                <div class="text-xs sm:text-sm font-semibold opacity-90 mb-1">
+                  Faza 1
+                </div>
+                <div class="text-base sm:text-lg font-bold opacity-90">
+                  Q1 2026
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+                Lansare Inițială
+              </h3>
+              <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Dezvoltare platformă web MVP</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Integrări API Google & Facebook</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Motor de căutare avansat</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Sistem recenzii hibrid</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Modul rezervări online</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Pilot în oraș major</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="group relative">
+            <div
+              class="bg-gradient-to-br from-neutral to-darkBg rounded-3xl p-6 sm:p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white"
+            >
+              <div
+                class="absolute -top-4 -left-4 bg-white text-black rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg"
+              >
+                2
+              </div>
+              <div class="mb-4 sm:mb-6">
+                <div class="text-xs sm:text-sm font-semibold opacity-90 mb-1">
+                  Faza 2
+                </div>
+                <div class="text-base sm:text-lg font-bold opacity-90">
+                  Q2-Q4 2026
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+                Expansiune & Mobile
+              </h3>
+              <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Acoperire națională</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>App-uri iOS/Android native</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Dashboard furnizori pro</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Sistem loialitate avansat</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Notificări inteligente</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Analytics detaliate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="group relative">
+            <div
+              class="bg-gradient-to-br from-secondary to-primary rounded-3xl p-6 sm:p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white"
+            >
+              <div
+                class="absolute -top-4 -left-4 bg-white text-black rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg"
+              >
+                3
+              </div>
+              <div class="mb-4 sm:mb-6">
+                <div class="text-xs sm:text-sm font-semibold opacity-90 mb-1">
+                  Faza 3
+                </div>
+                <div class="text-base sm:text-lg font-bold opacity-90">
+                  Q1-Q2 2027
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+                Inteligență Artificială
+              </h3>
+              <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>AI asistent conversațional</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Recomandări ML personalizate</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Extensie browser</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Sincronizare calendare</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Video chat integrat</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Predicții cerere</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="group relative">
+            <div
+              class="bg-gradient-to-br from-darkBg to-neutral rounded-3xl p-6 sm:p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white"
+            >
+              <div
+                class="absolute -top-4 -left-4 bg-white text-black rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg"
+              >
+                4
+              </div>
+              <div class="mb-4 sm:mb-6">
+                <div class="text-xs sm:text-sm font-semibold opacity-90 mb-1">
+                  Faza 4
+                </div>
+                <div class="text-base sm:text-lg font-bold opacity-90">
+                  Q3-Q4 2027
+                </div>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+                Blockchain & Global
+              </h3>
+              <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Recompense tokenizate</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Discounturi convertibile</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Contracte smart sigure</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Marketplace descentralizat</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Optimizări scalabilitate</span>
+                </li>
+                <li class="flex items-start space-x-3">
+                  <i
+                    data-lucide="check-circle"
+                    class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 sm:mt-1 opacity-80"
+                  ></i
+                  ><span>Expansiune internațională</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 px-4 bg-gradient-to-br from-neutral to-darkBg text-white"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+          Contactează-ne
+        </h2>
+        <p class="text-lg sm:text-xl text-gray-300 mb-12">
+          Împărtășește ideile tale sau alătură-te echipei noastre inovatoare
+        </p>
+
+        <div
+          class="bg-gradient-to-br from-darkAccent to-neutral rounded-3xl p-6 sm:p-8 md:p-12 border border-gray-700 shadow-2xl"
+        >
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/xovnpang"
+            method="POST"
+            class="space-y-6"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Nume"
+              required
+              class="w-full p-4 rounded-xl bg-gray-700 text-white placeholder-gray-400"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              class="w-full p-4 rounded-xl bg-gray-700 text-white placeholder-gray-400"
+            />
+            <textarea
+              name="message"
+              placeholder="Mesaj"
+              required
+              class="w-full p-4 rounded-xl bg-gray-700 text-white placeholder-gray-400 h-32"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full bg-primary p-4 rounded-xl font-bold hover:bg-secondary transition"
+            >
+              Trimite
+            </button>
+          </form>
+          <p id="formMessage" class="hidden text-green-400 text-xl mt-4">
+            Mulțumim! Mesajul tău a fost trimis.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12">
+            <div class="group">
+              <div
+                class="text-primary text-sm font-semibold mb-2 uppercase tracking-wider"
+              >
+                Fondator & CEO
+              </div>
+              <div class="text-lg font-medium">Mitroi Alberto Ionut</div>
+            </div>
+            <div class="group">
+              <div
+                class="text-primary text-sm font-semibold mb-2 uppercase tracking-wider"
+              >
+                Email
+              </div>
+              <div class="text-lg font-medium">
+                mitroialbertoionut@gmail.com
+              </div>
+            </div>
+            <div class="group">
+              <div
+                class="text-primary text-sm font-semibold mb-2 uppercase tracking-wider"
+              >
+                Telefon
+              </div>
+              <div class="text-lg font-medium">+40 (745) 915 532</div>
+            </div>
+            <div class="group">
+              <div
+                class="text-primary text-sm font-semibold mb-2 uppercase tracking-wider"
+              >
+                Program
+              </div>
+              <div class="text-lg font-medium">Luni - Vineri, 9-18</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral py-12 px-4 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center space-x-9 mb-4">
+              <div class="relative inline-flex items-center justify-center">
+                <i data-lucide="search" class="w-10 h-10 text-white"></i>
+                <div
+                  class="absolute top-2 left-1 flex gap-0.5 transform scale-75"
+                >
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                </div>
+              </div>
+              <span class="text-xl font-bold text-white"
+                >TopZonal<span class="text-primary">.ro</span></span
+              >
+            </div>
+            <p class="text-gray-400 text-sm">
+              Revoluționăm serviciile locale cu tehnologie modernă
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Platformă</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <button
+                  onclick="scrollToSection('home')"
+                  class="hover:text-primary transition"
+                >
+                  Despre Noi
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('features')"
+                  class="hover:text-primary transition"
+                >
+                  Funcționalități
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('benefits')"
+                  class="hover:text-primary transition"
+                >
+                  Viziune
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('roadmap')"
+                  class="hover:text-primary transition"
+                >
+                  Roadmap
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Resurse</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-primary transition"
+                  >Documentație</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-primary transition">API</a></li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Suport</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Status</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Legal</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-primary transition">Termeni</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition"
+                  >Confidențialitate</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">GDPR</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm"
+        >
+          <p>© 2025 TopZonal.ro. Toate drepturile rezervate.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
