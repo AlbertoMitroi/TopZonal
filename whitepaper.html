@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <!-- Meta tags for SEO and social sharing -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TopZonal.ro - Whitepaper: Planul Funcțional</title>
+    <meta
+      name="description"
+      content="Descoperă planul funcțional complet al TopZonal.ro, platforma care revoluționează accesul la servicii locale în România prin tehnologie modernă și încredere verificată."
+    />
+    <meta
+      name="keywords"
+      content="servicii locale România, whitepaper TopZonal, plan funcțional, rezervări online, AI servicii"
+    />
+    <meta property="og:title" content="TopZonal.ro - Whitepaper" />
+    <meta
+      property="og:description"
+      content="Planul detaliat al platformei TopZonal.ro pentru conectarea utilizatorilor cu furnizori de servicii verificați."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://topzonal.ro/whitepaper.html" />
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#EF4444", // Softer red for accents
+              secondary: "#DC2626", // Deeper red for highlights
+              neutral: "#111827", // Dark neutral for text/backgrounds
+              light: "#F9FAFB", // Light background
+              darkBg: "#0F172A", // Improved dark mode background
+              darkAccent: "#1E293B", // Softer dark accents
+            },
+          },
+        },
+        darkMode: "class",
+      };
+    </script>
+    <!-- Lucide Icons CDN for icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS for overrides and additional styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen bg-light text-neutral">
+    <!-- Navigation Bar -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div
+            class="flex items-center space-x-9 cursor-pointer"
+            onclick="window.location.href='index.html'"
+          >
+            <div class="relative inline-flex items-center justify-center logo">
+              <i data-lucide="search" class="w-10 h-10 text-neutral"></i>
+              <div
+                class="absolute top-2 left-1 flex gap-0.5 transform scale-75"
+              >
+                <!-- Adjusted position and scale for overlap -->
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-3 h-3 fill-primary text-primary"
+                ></i>
+              </div>
+            </div>
+            <span class="text-2xl font-bold text-neutral"
+              >TopZonal<span class="text-primary">.ro</span></span
+            >
+          </div>
+
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="index.html#home"
+              class="text-gray-700 hover:text-primary transition font-medium"
+              >Acasă</a
+            >
+            <a
+              href="index.html#features"
+              class="text-gray-700 hover:text-primary transition font-medium"
+              >Funcționalități</a
+            >
+            <a
+              href="index.html#benefits"
+              class="text-gray-700 hover:text-primary transition font-medium"
+              >Viziune</a
+            >
+            <a
+              href="index.html#roadmap"
+              class="text-gray-700 hover:text-primary transition font-medium"
+              >Roadmap</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-700 hover:text-primary transition font-medium"
+              >Contact</a
+            >
+            <a
+              href="whitepaper.html"
+              class="text-gray-700 hover:text-primary transition font-medium"
+              >Whitepaper</a
+            >
+            <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200">
+              🌙
+            </button>
+          </div>
+
+          <button id="menuToggle" class="md:hidden text-neutral">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="md:hidden bg-white border-t border-gray-200 hidden"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html#home"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+            >Acasă</a
+          >
+          <a
+            href="index.html#features"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+            >Funcționalități</a
+          >
+          <a
+            href="index.html#benefits"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+            >Viziune</a
+          >
+          <a
+            href="index.html#roadmap"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+            >Roadmap</a
+          >
+          <a
+            href="index.html#contact"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+            >Contact</a
+          >
+          <a
+            href="whitepaper.html"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+            >Whitepaper</a
+          >
+          <button
+            onclick="toggleDarkMode()"
+            class="block w-full text-left px-3 py-3 hover:bg-gray-100 rounded font-medium"
+          >
+            Mod Întunecat
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="pt-32 pb-20 px-4 bg-gradient-to-br from-light to-primary/20"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center">
+          <div class="flex justify-center">
+            <div
+              class="relative inline-flex items-center justify-center logo animate-float"
+            >
+              <i data-lucide="search" class="w-32 h-32 text-neutral"></i>
+              <div
+                class="absolute top-6 left-1 flex gap-0.5 transform scale-75"
+              >
+                <!-- Adjusted for overlap -->
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="w-10 h-10 fill-primary text-primary"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+            Whitepaper TopZonal.ro
+            <span
+              class="block bg-gradient-to-r from-primary via-secondary to-neutral bg-clip-text text-transparent mt-2"
+            >
+              Planul Funcțional Complet
+            </span>
+          </h1>
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Descoperă viziunea detaliată a platformei care conectează
+            utilizatorii cu furnizori de servicii locali verificați, folosind
+            tehnologie modernă și AI pentru o experiență simplă și de încredere.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Whitepaper Content Section -->
+    <section id="whitepaper" class="py-12 md:py-20 px-4 bg-gray-100">
+      <div class="max-w-5xl mx-auto">
+        <header class="mb-12 text-center">
+          <h1 class="text-4xl md:text-5xl font-extrabold text-primary-700 mb-4">
+            TopZonal.ro
+          </h1>
+          <p class="text-2xl md:text-3xl font-light text-gray-700">
+            Plan Funcțional Complet & Business Model
+          </p>
+        </header>
+
+        <section
+          id="cuprins"
+          class="bg-white p-6 md:p-8 rounded-2xl shadow-lg mb-16 scroll-mt-20"
+        >
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+            <span class="text-3xl mr-3">📋</span> CUPRINS
+          </h2>
+          <ul class="list-none space-y-3">
+            <li>
+              <a
+                href="#problema"
+                class="text-lg text-primary-600 hover:text-primary-800 hover:underline"
+                >1. Problema & Soluția Redefinită</a
+              >
+            </li>
+            <li>
+              <a
+                href="#taxonomie"
+                class="text-lg text-primary-600 hover:text-primary-800 hover:underline"
+                >2. Taxonomie Utilizatori & Roluri</a
+              >
+            </li>
+            <li>
+              <a
+                href="#onboarding"
+                class="text-lg text-primary-600 hover:text-primary-800 hover:underline"
+                >3. Procesul de Onboarding Furnizori</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >4. Arhitectura Categoriilor</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >5. Customer Journey</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >6. Sistemul de Rezervări</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >7. Ecosistemul de Review-uri</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >8. Gamification & Economia Punctelor (TokenPoints)</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >9. Management Dashboard Furnizori</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >10. Rolul AI în Ecosistem</a
+              >
+            </li>
+            <li>
+              <a
+                href="#continuare"
+                class="text-lg text-yellow-600 hover:text-yellow-800 hover:underline"
+                >11. Business Model & Revenue Streams</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section id="problema" class="space-y-12 scroll-mt-20">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 border-b-4 border-primary-300 pb-4"
+          >
+            1. Problema & Soluția Redefinită
+          </h2>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              1.1 Durerea Utilizatorilor Finali
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="border-r-0 md:border-r md:pr-8 border-red-200">
+                <h4 class="text-xl font-bold text-red-700 mb-4">
+                  Problema Fundamentală:
+                </h4>
+                <p
+                  class="text-lg font-semibold text-red-900 bg-red-50 p-4 rounded-lg mb-6"
+                >
+                  Găsirea unui serviciu de încredere este un proces frustrant și
+                  consumator de timp.
+                </p>
+                <h5 class="text-lg font-semibold text-gray-800 mb-3">
+                  Realități actuale:
+                </h5>
+                <ul class="space-y-3 text-gray-700">
+                  <li>
+                    <strong class="text-gray-900"
+                      >Lipsa Recomandărilor Personale:</strong
+                    >
+                    <ul
+                      class="list-disc list-outside pl-5 mt-1 space-y-1 text-sm"
+                    >
+                      <li>
+                        Nu toți au prieteni/familie care să fi folosit serviciul
+                        specific.
+                      </li>
+                      <li>
+                        Recomandările verbale sunt subiective și
+                        nepersonalizate.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong class="text-gray-900"
+                      >Fragmentarea Informațiilor:</strong
+                    >
+                    <ul
+                      class="list-disc list-outside pl-5 mt-1 space-y-1 text-sm"
+                    >
+                      <li>
+                        Cercetări pe Google Maps, Facebook, forum-uri, grupuri
+                        locale, site-uri individuale.
+                      </li>
+                      <li class="font-medium text-red-600">
+                        Rezultat: 2-3 ore pierdute pentru o singură decizie.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong class="text-gray-900"
+                      >Lipsă de Transparență:</strong
+                    >
+                    <ul
+                      class="list-disc list-outside pl-5 mt-1 space-y-1 text-sm"
+                    >
+                      <li>
+                        Prețuri "la cerere", disponibilitate vagă, reviews
+                        manipulabile.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong class="text-gray-900"
+                      >Anxietate Decizională:</strong
+                    >
+                    <ul
+                      class="list-disc list-outside pl-5 mt-1 space-y-1 text-sm"
+                    >
+                      <li>"Oare am ales bine?"</li>
+                      <li>Overload de informații contradictorii.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-8 md:mt-0">
+                <h4 class="text-xl font-bold text-green-700 mb-4">
+                  Soluția TopZonal:
+                </h4>
+                <div class="space-y-4">
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Agregare Inteligentă
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Toate informațiile într-un singur loc (reviews
+                        verificate + externe, prețuri, disponibilitate).
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Sistem de Trust Verificat
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Reviews doar de la clienți reali, cu rezervare
+                        confirmată.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        AI Conversațional
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        "Vreau un dentist bun..." → recomandări personalizate în
+                        30 secunde.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Transparență Totală
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Prețuri clare, rating detaliat pe categorii (calitate,
+                        punctualitate, etc.).
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Rezervare Instantanee
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Vezi disponibilitatea real-time, rezervi în 3 click-uri.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              1.2 Durerea Furnizorilor de Servicii
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="border-r-0 md:border-r md:pr-8 border-red-200">
+                <h4 class="text-xl font-bold text-red-700 mb-4">
+                  Problema Fundamentală:
+                </h4>
+                <p
+                  class="text-lg font-semibold text-red-900 bg-red-50 p-4 rounded-lg mb-6"
+                >
+                  Vizibilitate scăzută și dependență de platforme externe care
+                  nu oferă control.
+                </p>
+                <h5 class="text-lg font-semibold text-gray-800 mb-3">
+                  Realități actuale:
+                </h5>
+                <ul class="space-y-3 text-gray-700">
+                  <li>
+                    <strong class="text-gray-900"
+                      >Invizibilitate Online:</strong
+                    >
+                    Business-uri mici fără buget, SEO lent, algoritm Google
+                    opac.
+                  </li>
+                  <li>
+                    <strong class="text-gray-900"
+                      >Lipsa Instrumentelor de Management:</strong
+                    >
+                    Calendar pe hârtie, programări prin telefon, fără
+                    statistici.
+                  </li>
+                  <li>
+                    <strong class="text-gray-900"
+                      >Recenzii Necontrolabile:</strong
+                    >
+                    Un review negativ afectează grav, imposibil de șters
+                    recenzii false.
+                  </li>
+                  <li>
+                    <strong class="text-gray-900"
+                      >Costuri Marketing Ridicate:</strong
+                    >
+                    Google Ads scump, Facebook Ads cu ROI incert, marketing
+                    tradițional ineficient.
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-8 md:mt-0">
+                <h4 class="text-xl font-bold text-green-700 mb-4">
+                  Soluția TopZonal pentru Furnizori:
+                </h4>
+                <div class="space-y-4">
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Promovare prin Performanță
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Rating mai mare = ranking mai bun. Meritocratic, nu
+                        pay-to-win.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Instrumente Gratuite de Management
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Calendar digital, acceptare rezervări, statistici de
+                        bază.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Protecție Împotriva Abuzurilor
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Doar reviews verificate, posibilitate de răspuns public,
+                        sistem de raportare.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Creștere Organică & Retenție
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Program de loialitate (Premium), re-marketing automat.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start p-4 bg-green-50 rounded-lg">
+                    <span class="text-2xl mr-3">✅</span>
+                    <div>
+                      <h5 class="font-semibold text-green-800">
+                        Cost Accesibil
+                      </h5>
+                      <p class="text-gray-700 text-sm">
+                        Cont Gratuit funcțional (vs. 500-1000 RON/lună Google
+                        Ads).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="taxonomie" class="space-y-12 mt-16 scroll-mt-20">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 border-b-4 border-primary-300 pb-4"
+          >
+            2. Taxonomie Utilizatori & Roluri
+          </h2>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              2.1 Structură de Roluri
+            </h3>
+            <div
+              class="border-4 border-primary-600 rounded-2xl p-6 bg-primary-50 text-center shadow-lg"
+            >
+              <h4 class="text-2xl font-bold text-primary-800 mb-6">
+                TOPZONAL ECOSYSTEM
+              </h4>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-md border border-primary-200"
+                >
+                  <h5 class="text-xl font-bold text-primary-700 mb-4">
+                    END USERS (Clienți)
+                  </h5>
+                  <ul class="list-none space-y-2 text-gray-700 text-left pl-4">
+                    <li>• Guest</li>
+                    <li>• Registered</li>
+                    <li>• Premium</li>
+                  </ul>
+                </div>
+                <div
+                  class="bg-white p-6 rounded-xl shadow-md border border-primary-200"
+                >
+                  <h5 class="text-xl font-bold text-primary-700 mb-4">
+                    PROVIDERS (Furnizori)
+                  </h5>
+                  <ul class="list-none space-y-2 text-gray-700 text-left pl-4">
+                    <li>• Unclaimed (Non-oficial)</li>
+                    <li>• Pending</li>
+                    <li>• Basic (Verified)</li>
+                    <li>• Pro (Premium)</li>
+                    <li>• Enterprise</li>
+                  </ul>
+                </div>
+                <div
+                  class="bg-white p-6 rounded-xl shadow-md border border-primary-200"
+                >
+                  <h5 class="text-xl font-bold text-primary-700 mb-4">
+                    ADMINISTRATORS
+                  </h5>
+                  <ul class="list-none space-y-2 text-gray-700 text-left pl-4">
+                    <li>• SuperAdmin</li>
+                    <li>• Moderator</li>
+                    <li>• Verifier</li>
+                    <li>• Support</li>
+                    <li>• Analyst</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              2.2 END USERS (Clienți)
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div
+                class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200"
+              >
+                <h4 class="text-xl font-bold text-gray-800 mb-4">
+                  A) Guest (Vizitator)
+                </h4>
+                <ul class="space-y-2 mb-4">
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span> Browsing
+                    servicii
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span>
+                    Vizualizare reviews
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span>
+                    Utilizare AI (limitat)
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-red-500 text-xl mr-2">❌</span> Rezervare
+                    servicii
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-red-500 text-xl mr-2">❌</span> Scriere
+                    reviews
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-red-500 text-xl mr-2">❌</span> Acumulare
+                    TokenPoints
+                  </li>
+                </ul>
+                <div
+                  class="bg-white p-4 rounded-lg border border-gray-200 mt-6"
+                >
+                  <p class="font-semibold text-sm text-gray-700">Use Case:</p>
+                  <p class="text-sm text-gray-600 italic">
+                    "Ana caută, compară, citește. Când vrea să rezerve → popup
+                    'Creează cont gratuit'."
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border-2 border-primary-500 relative"
+              >
+                <span
+                  class="absolute -top-3 left-1/2 -translate-x-1/2 inline-block bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-full"
+                  >GRATUIT</span
+                >
+                <h4 class="text-xl font-bold text-primary-700 mb-4 mt-4">
+                  B) Registered (Cont Standard)
+                </h4>
+                <ul class="space-y-2 mb-4">
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span> Toate de
+                    la Guest +
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span>
+                    Rezervare servicii (nelimitat)
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span> Scriere
+                    reviews verificate
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span> Salvare
+                    favorite
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span> AI
+                    nelimitat
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 text-xl mr-2">✅</span>
+                    Acumulare TokenPoints
+                  </li>
+                </ul>
+                <div
+                  class="bg-primary-50 p-4 rounded-lg border border-primary-200 mt-6"
+                >
+                  <p class="font-semibold text-sm text-primary-700">
+                    Use Case:
+                  </p>
+                  <p class="text-sm text-primary-900 italic">
+                    "Mihai rezervă 3 servicii, lasă 2 reviews, acumulează 130
+                    puncte. Le folosește pentru 10% discount."
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 relative"
+              >
+                <span
+                  class="absolute -top-3 left-1/2 -translate-x-1/2 inline-block bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full"
+                  >Faza 3</span
+                >
+                <h4 class="text-xl font-bold text-gray-800 mb-2 mt-4">
+                  C) Premium (Opțional)
+                </h4>
+                <p class="font-semibold text-lg text-primary-600 mb-3">
+                  19 RON/lună
+                </p>
+                <ul class="space-y-2 mb-4">
+                  <li class="flex items-center">
+                    <span class="text-secondary-500 text-xl mr-2">✨</span>
+                    Prioritate suport
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary-500 text-xl mr-2">✨</span>
+                    Oferte exclusive
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary-500 text-xl mr-2">✨</span>
+                    TokenPoints bonus +50%
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary-500 text-xl mr-2">✨</span>
+                    Rezervări flexibile
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-secondary-500 text-xl mr-2">✨</span>
+                    Concierge service (AI)
+                  </li>
+                </ul>
+                <div
+                  class="bg-white p-4 rounded-lg border border-gray-200 mt-6"
+                >
+                  <p class="font-semibold text-sm text-gray-700">Target:</p>
+                  <p class="text-sm text-gray-600 italic">
+                    Utilizatori power users (5+ rezervări/lună).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              2.3 PROVIDERS (Furnizori)
+            </h3>
+
+            <h4 class="text-xl font-medium text-gray-800 mt-6 mb-3">
+              Tipologia Juridică
+            </h4>
+            <div
+              class="overflow-x-auto rounded-lg shadow-md border border-gray-200"
+            >
+              <table class="min-w-full divide-y divide-gray-200 bg-white">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider"
+                    >
+                      Tip Entitate
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider"
+                    >
+                      Denumire Internă
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider"
+                    >
+                      Exemple
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider"
+                    >
+                      Documentație Necesară
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      Persoană Fizică Autorizată
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      PFA
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Instalator, fotograf, meditator
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      CI + Certificat PFA
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      Întreprindere Individuală
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      II
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Electrician, coafor
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      CI + Certificat ANAF
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      Societate cu Răspundere Limitată
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      SRL
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Cabinet medical, service auto
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Certificat RC + CI administrator
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      Societate pe Acțiuni
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      SA
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Lanțuri mari (rare)
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Certificat RC + CI administrator
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      Asociație / ONG
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      ONG
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Cursuri non-profit, consultanță
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                    >
+                      Statut + CI președinte
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="text-xl font-medium text-gray-800 mt-10 mb-6">
+              Statusuri Cont Furnizor
+            </h4>
+            <div class="relative pl-10">
+              <div
+                class="absolute left-4 top-2 h-full w-0.5 bg-gray-300"
+                style="height: calc(100% - 2rem)"
+              ></div>
+
+              <div class="relative pb-10">
+                <div
+                  class="absolute top-2 -left-3 h-4 w-4 rounded-full bg-gray-400 border-4 border-white ring-4 ring-gray-300"
+                ></div>
+                <div
+                  class="ml-8 bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200"
+                >
+                  <h5 class="font-bold text-lg text-gray-700">
+                    UNCLAIMED (Non-oficial)
+                  </h5>
+                  <p class="text-sm text-gray-600">
+                    Import automat din Google/Facebook
+                  </p>
+                  <ul class="text-sm mt-2 space-y-1">
+                    <li class="flex items-center">
+                      <span class="text-red-500 text-lg mr-2">❌</span> Nu poate
+                      accepta rezervări
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-red-500 text-lg mr-2">❌</span> Apare
+                      jos în rezultate
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-green-500 text-lg mr-2">✅</span> Poate
+                      fi revendicat
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative pb-10">
+                <div
+                  class="absolute top-2 -left-3 h-4 w-4 rounded-full bg-yellow-500 border-4 border-white ring-4 ring-yellow-300"
+                ></div>
+                <div
+                  class="ml-8 bg-yellow-50 p-4 rounded-lg shadow-md border border-yellow-200"
+                >
+                  <h5 class="font-bold text-lg text-yellow-700">
+                    PENDING (În verificare)
+                  </h5>
+                  <p class="text-sm text-yellow-800">
+                    Furnizor a trimis cerere + documente
+                  </p>
+                  <ul class="text-sm mt-2 space-y-1">
+                    <li class="flex items-center">
+                      <span class="text-yellow-600 text-lg mr-2">⏳</span>
+                      Așteaptă aprobare admin (24-48h)
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-red-500 text-lg mr-2">❌</span> Nu poate
+                      accepta rezervări încă
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative pb-4">
+                <div
+                  class="absolute top-2 -left-3 h-4 w-4 rounded-full bg-green-500 border-4 border-white ring-4 ring-green-300"
+                ></div>
+                <div
+                  class="ml-8 bg-green-50 p-4 rounded-lg shadow-md border border-green-200"
+                >
+                  <h5 class="font-bold text-lg text-green-700">
+                    BASIC (Cont Gratuit)
+                  </h5>
+                  <ul class="text-sm mt-2 space-y-1">
+                    <li class="flex items-center">
+                      <span class="text-green-500 text-lg mr-2">✅</span>
+                      Verificat, activ
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-green-500 text-lg mr-2">✅</span> Poate
+                      accepta rezervări
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-green-500 text-lg mr-2">📊</span>
+                      Statistici de bază
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative pl-16 py-4">
+                <div
+                  class="absolute left-10 top-0 h-full w-0.5 bg-gray-300"
+                ></div>
+                <div
+                  class="absolute left-8 top-1/2 -mt-px w-4 h-0.5 bg-gray-300"
+                ></div>
+                <div
+                  class="ml-8 bg-primary-50 p-3 rounded-lg border border-primary-200 shadow-sm inline-block"
+                >
+                  <p class="text-sm font-semibold text-primary-600">
+                    → UPGRADE TO PRO (149 RON/lună)
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative pb-4">
+                <div
+                  class="absolute top-2 -left-3 h-4 w-4 rounded-full bg-primary-500 border-4 border-white ring-4 ring-primary-300"
+                ></div>
+                <div
+                  class="ml-8 bg-white p-4 rounded-lg shadow-md border-2 border-primary-400"
+                >
+                  <h5 class="font-bold text-lg text-primary-700">
+                    PRO (Cont Premium)
+                  </h5>
+                  <ul class="text-sm mt-2 space-y-1">
+                    <li class="flex items-center">
+                      <span class="text-green-500 text-lg mr-2">✅</span> Toate
+                      de la Basic +
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-primary-500 text-lg mr-2">🚀</span>
+                      Prioritate în rezultate
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-primary-500 text-lg mr-2">📈</span>
+                      Statistici avansate
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-primary-500 text-lg mr-2">🎁</span>
+                      Marketing tools
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative pl-16 py-4">
+                <div
+                  class="absolute left-10 top-0 h-full w-0.5 bg-gray-300"
+                ></div>
+                <div
+                  class="absolute left-8 top-1/2 -mt-px w-4 h-0.5 bg-gray-300"
+                ></div>
+                <div
+                  class="ml-8 bg-gray-800 p-3 rounded-lg border border-gray-600 shadow-sm inline-block"
+                >
+                  <p class="text-sm font-semibold text-white">
+                    → UPGRADE TO ENTERPRISE (Custom)
+                  </p>
+                </div>
+              </div>
+
+              <div class="relative pb-10">
+                <div
+                  class="absolute top-2 -left-3 h-4 w-4 rounded-full bg-gray-800 border-4 border-white ring-4 ring-gray-400"
+                ></div>
+                <div
+                  class="ml-8 bg-gray-900 text-white p-4 rounded-lg shadow-md border border-gray-700"
+                >
+                  <h5 class="font-bold text-lg">ENTERPRISE (Multi-locație)</h5>
+                  <p class="text-sm text-gray-300">Pentru lanțuri/francize</p>
+                  <ul class="text-sm mt-2 space-y-1 text-gray-200">
+                    <li>API access, account manager</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div
+                  class="absolute top-2 -left-3 h-4 w-4 rounded-full bg-red-600 border-4 border-white ring-4 ring-red-300"
+                ></div>
+                <div
+                  class="ml-8 bg-red-50 p-4 rounded-lg shadow-md border border-red-200"
+                >
+                  <h5 class="font-bold text-lg text-red-700">
+                    SUSPENDED (Suspendat)
+                  </h5>
+                  <p class="text-sm text-red-600">
+                    Încălcare termeni SAU Plată expirată
+                  </p>
+                  <ul class="text-sm mt-2 space-y-1">
+                    <li class="flex items-center">
+                      <span class="text-red-500 text-lg mr-2">❌</span>
+                      Invizibil în căutări
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-yellow-600 text-lg mr-2">⏳</span> Poate
+                      apela/rezolva problema
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6 mt-10">
+              <h4 class="text-xl font-medium text-gray-800 mt-6 mb-3">
+                Detaliere Statusuri Cont
+              </h4>
+
+              <div
+                class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-200"
+              >
+                <h5 class="text-lg font-bold text-green-700 mb-4">
+                  C) BASIC (Cont Gratuit - Verificat) - Cost: 0 RON
+                </h5>
+                <div class="overflow-x-auto">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-200">
+                      <tr>
+                        <th
+                          class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase"
+                        >
+                          Feature
+                        </th>
+                        <th
+                          class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase"
+                        >
+                          Limit/Details
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">
+                          Profil Public
+                        </td>
+                        <td class="px-4 py-2 text-sm">Complet funcțional</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium bg-gray-100">
+                          Galerie Foto
+                        </td>
+                        <td class="px-4 py-2 text-sm bg-gray-100">
+                          Max 10 fotografii
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">Video</td>
+                        <td class="px-4 py-2 text-sm">
+                          <span class="text-red-600">❌ Nu (doar Pro)</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium bg-gray-100">
+                          Calendar Rezervări
+                        </td>
+                        <td class="px-4 py-2 text-sm bg-gray-100">
+                          <span class="text-green-600">✅ Da, manual</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">
+                          Rezervări/Lună
+                        </td>
+                        <td class="px-4 py-2 text-sm">Max 100</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium bg-gray-100">
+                          Integrare Calendar Extern
+                        </td>
+                        <td class="px-4 py-2 text-sm bg-gray-100">
+                          <span class="text-red-600">❌ Nu (doar Pro)</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">
+                          Comision Rezervări
+                        </td>
+                        <td class="px-4 py-2 text-sm font-bold text-green-700">
+                          0% (în MVP)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border-2 border-primary-400"
+              >
+                <h5 class="text-lg font-bold text-primary-700 mb-4">
+                  D) PRO (Cont Premium - Verificat) - Cost: 149 RON/lună
+                </h5>
+                <div class="overflow-x-auto">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-primary-50">
+                      <tr>
+                        <th
+                          class="px-4 py-2 text-left text-xs font-bold text-primary-700 uppercase"
+                        >
+                          Feature
+                        </th>
+                        <th
+                          class="px-4 py-2 text-left text-xs font-bold text-primary-700 uppercase"
+                        >
+                          Details
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">
+                          Toate de la Basic
+                        </td>
+                        <td class="px-4 py-2 text-sm">
+                          <span class="text-green-600">✅</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium bg-primary-50">
+                          Prioritate Căutare
+                        </td>
+                        <td class="px-4 py-2 text-sm bg-primary-50">
+                          <span class="font-semibold text-primary-600"
+                            >🚀 +40% șanse</span
+                          >
+                          în top 3
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">Badge PRO</td>
+                        <td class="px-4 py-2 text-sm">👑 Iconiță vizibilă</td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium bg-primary-50">
+                          Calendar Inteligent
+                        </td>
+                        <td class="px-4 py-2 text-sm bg-primary-50">
+                          <span class="font-semibold text-primary-600"
+                            >Sincronizare</span
+                          >
+                          Google/Apple/Outlook
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">
+                          Acceptare Automată
+                        </td>
+                        <td class="px-4 py-2 text-sm">
+                          Rezervări confirmate instant
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium bg-primary-50">
+                          Statistici Avansate
+                        </td>
+                        <td class="px-4 py-2 text-sm bg-primary-50">
+                          <span class="font-semibold text-primary-600"
+                            >📈 Conversion rate</span
+                          >, sursă trafic, export
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-2 text-sm font-medium">
+                          Support Prioritar
+                        </td>
+                        <td class="px-4 py-2 text-sm">Chat live + telefon</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              2.4 ADMINISTRATORS
+            </h3>
+            <div
+              class="bg-gray-800 border border-gray-700 rounded-2xl p-6 md:p-8 text-center shadow-lg"
+            >
+              <h4 class="text-2xl font-bold text-white mb-8">
+                ADMIN HIERARCHY
+              </h4>
+
+              <div class="flex justify-center mb-4">
+                <div
+                  class="inline-block bg-primary-600 text-white p-4 rounded-lg shadow-xl ring-4 ring-primary-400"
+                >
+                  <h5 class="text-xl font-extrabold">SUPERADMIN</h5>
+                  <p class="text-sm text-primary-100">(Fondatori/CTO)</p>
+                  <ul
+                    class="text-sm text-left list-disc list-inside mt-2 text-primary-50"
+                  >
+                    <li>Acces complet sistem</li>
+                    <li>Management admini</li>
+                    <li>Acces bază de date</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="h-12 w-1 bg-gray-600 mx-auto"></div>
+
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4"
+              >
+                <div
+                  class="bg-gray-700 text-white p-4 rounded-lg shadow-lg border border-gray-600 h-full"
+                >
+                  <h5 class="font-bold text-primary-300">MODERATOR</h5>
+                  <p class="text-xs text-gray-400 mb-2">(Content Manager)</p>
+                  <ul
+                    class="text-sm text-left list-disc list-inside space-y-1 text-gray-200"
+                  >
+                    <li>Verificare reviews</li>
+                    <li>Moderare rapoarte</li>
+                    <li>Ban utilizatori abuzivi</li>
+                  </ul>
+                </div>
+                <div
+                  class="bg-gray-700 text-white p-4 rounded-lg shadow-lg border border-gray-600 h-full"
+                >
+                  <h5 class="font-bold text-primary-300">VERIFIER</h5>
+                  <p class="text-xs text-gray-400 mb-2">(Business Validator)</p>
+                  <ul
+                    class="text-sm text-left list-disc list-inside space-y-1 text-gray-200"
+                  >
+                    <li>Aprobare furnizori</li>
+                    <li>Verificare documente</li>
+                    <li>Investigare reclamații</li>
+                  </ul>
+                </div>
+                <div
+                  class="bg-gray-700 text-white p-4 rounded-lg shadow-lg border border-gray-600 h-full"
+                >
+                  <h5 class="font-bold text-primary-300">SUPPORT</h5>
+                  <p class="text-xs text-gray-400 mb-2">(Customer Service)</p>
+                  <ul
+                    class="text-sm text-left list-disc list-inside space-y-1 text-gray-200"
+                  >
+                    <li>Răspuns tichete</li>
+                    <li>Rezolvare probleme</li>
+                    <li>Ghidare utilizatori</li>
+                  </ul>
+                </div>
+                <div
+                  class="bg-gray-700 text-white p-4 rounded-lg shadow-lg border border-gray-600 h-full"
+                >
+                  <h5 class="font-bold text-primary-300">ANALYST</h5>
+                  <p class="text-xs text-gray-400 mb-2">(Data Scientist)</p>
+                  <ul
+                    class="text-sm text-left list-disc list-inside space-y-1 text-gray-200"
+                  >
+                    <li>Rapoarte BI</li>
+                    <li>Optimizare algoritmi</li>
+                    <li>Detectare fraude</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="onboarding" class="space-y-12 mt-16 scroll-mt-20">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 border-b-4 border-primary-300 pb-4"
+          >
+            3. Procesul de Onboarding Furnizori
+          </h2>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              3.1 Fluxuri de Intrare
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div
+                class="bg-gray-50 p-6 rounded-xl shadow-lg border-2 border-gray-200"
+              >
+                <h5 class="text-xl font-bold text-gray-800 mb-6 text-center">
+                  FLOW A: Auto-Import
+                </h5>
+                <div class="relative pl-6 space-y-4">
+                  <div
+                    class="absolute top-1 left-1.5 h-full w-0.5 bg-gray-300"
+                  ></div>
+
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-gray-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-gray-100 p-2 rounded-md">
+                      [Google/FB API] → [Auto-create profile] →
+                      <span class="font-semibold">UNCLAIMED</span>
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-gray-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-gray-100 p-2 rounded-md">
+                      [Furnizor vede banner "Revendică"]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-gray-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-gray-100 p-2 rounded-md">
+                      [Click "Claim"] → [Form + Docs]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-yellow-500 ring-2 ring-white"
+                    ></div>
+                    <p
+                      class="text-sm bg-yellow-50 p-2 rounded-md font-semibold text-yellow-700"
+                    >
+                      Status: PENDING
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-green-500 ring-2 ring-white"
+                    ></div>
+                    <p
+                      class="text-sm bg-green-50 p-2 rounded-md font-semibold text-green-700"
+                    >
+                      [APROBAT] → Status: BASIC
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg border-2 border-primary-300"
+              >
+                <h5 class="text-xl font-bold text-primary-700 mb-6 text-center">
+                  FLOW B: Înscriere Directă
+                </h5>
+                <div class="relative pl-6 space-y-4">
+                  <div
+                    class="absolute top-1 left-1.5 h-full w-0.5 bg-gray-300"
+                  ></div>
+
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-primary-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-primary-50 p-2 rounded-md">
+                      [Homepage] → [Buton "Devino Partener"]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-primary-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-primary-50 p-2 rounded-md">
+                      [Form complet] + [Upload documente]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-yellow-500 ring-2 ring-white"
+                    ></div>
+                    <p
+                      class="text-sm bg-yellow-50 p-2 rounded-md font-semibold text-yellow-700"
+                    >
+                      Status: PENDING
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-primary-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-primary-50 p-2 rounded-md">
+                      [Admin verifică]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-green-500 ring-2 ring-white"
+                    ></div>
+                    <p
+                      class="text-sm bg-green-50 p-2 rounded-md font-semibold text-green-700"
+                    >
+                      [APROBAT] → Status: BASIC
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gray-50 p-6 rounded-xl shadow-lg border-2 border-secondary-300"
+              >
+                <h5
+                  class="text-xl font-bold text-secondary-700 mb-6 text-center"
+                >
+                  FLOW C: Invitație
+                </h5>
+                <div class="relative pl-6 space-y-4">
+                  <div
+                    class="absolute top-1 left-1.5 h-full w-0.5 bg-gray-300"
+                  ></div>
+
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-secondary-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-secondary-50 p-2 rounded-md">
+                      [TopZonal identifică] → [Email invitație]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-secondary-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-secondary-50 p-2 rounded-md">
+                      [Furnizor click link cu token]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-secondary-500 ring-2 ring-white"
+                    ></div>
+                    <p class="text-sm bg-secondary-50 p-2 rounded-md">
+                      [Form simplificat (pre-populat)]
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-yellow-500 ring-2 ring-white"
+                    ></div>
+                    <p
+                      class="text-sm bg-yellow-50 p-2 rounded-md font-semibold text-yellow-700"
+                    >
+                      Status: PENDING (prioritar)
+                    </p>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute top-1 -left-5 h-2 w-2 rounded-full bg-green-500 ring-2 ring-white"
+                    ></div>
+                    <p
+                      class="text-sm bg-green-50 p-2 rounded-md font-semibold text-green-700"
+                    >
+                      [APROBAT] → BASIC + Bonus
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+            <h3
+              class="text-2xl md:text-3xl font-semibold text-primary-700 mb-6"
+            >
+              3.2 Formularul de Înscriere (Step-by-Step)
+            </h3>
+
+            <div
+              class="bg-white p-6 md:p-8 rounded-2xl shadow-inner border border-gray-200"
+            >
+              <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-gray-900">
+                  Adaugă Business-ul Tău pe TopZonal
+                </h3>
+                <p class="text-gray-600">Completează formularul în 5 minute</p>
+              </div>
+
+              <form class="space-y-12 opacity-75 pointer-events-none">
+                <fieldset class="border-t-2 border-primary-200 pt-6">
+                  <legend
+                    class="text-xl font-semibold text-primary-700 px-3 -ml-3"
+                  >
+                    📝 STEP 1: Informații Business
+                  </legend>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                      <label
+                        for="tip_entitate"
+                        class="block text-sm font-medium text-gray-700"
+                        >Tip Entitate</label
+                      >
+                      <select
+                        id="tip_entitate"
+                        disabled
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 bg-gray-50"
+                      >
+                        <option>PFA (Persoană Fizică Autorizată)</option>
+                        <option>II (Întreprindere Individuală)</option>
+                        <option selected>
+                          SRL (Societate cu Răspundere Limitată)
+                        </option>
+                      </select>
+                    </div>
+                    <div>
+                      <label
+                        for="nume_business"
+                        class="block text-sm font-medium text-gray-700"
+                        >Nume Business</label
+                      >
+                      <input
+                        type="text"
+                        id="nume_business"
+                        disabled
+                        placeholder="Ex: Dr. Popescu Dental Clinic"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="cui"
+                        class="block text-sm font-medium text-gray-700"
+                        >CUI (Cod Unic de Identificare)</label
+                      >
+                      <div class="flex mt-1">
+                        <input
+                          type="text"
+                          id="cui"
+                          disabled
+                          placeholder="12345678"
+                          class="flex-1 block w-full rounded-l-md border-gray-300 shadow-sm bg-gray-50"
+                        />
+                        <button
+                          type="button"
+                          disabled
+                          class="inline-flex items-center px-4 py-2 border border-l-0 border-gray-300 rounded-r-md bg-gray-200 text-gray-600 text-sm"
+                        >
+                          Verifică CUI ✓
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <label
+                        for="reg_com"
+                        class="block text-sm font-medium text-gray-700"
+                        >Nr. Registrul Comerțului</label
+                      >
+                      <input
+                        type="text"
+                        id="reg_com"
+                        disabled
+                        placeholder="J12/1234/2020"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="border-t-2 border-primary-200 pt-6">
+                  <legend
+                    class="text-xl font-semibold text-primary-700 px-3 -ml-3"
+                  >
+                    📞 STEP 2: Contact & Locație
+                  </legend>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="space-y-4">
+                      <h4 class="text-lg font-medium text-gray-800">Contact</h4>
+                      <div>
+                        <label
+                          for="email_biz"
+                          class="block text-sm font-medium text-gray-700"
+                          >Email Business</label
+                        >
+                        <input
+                          type="email"
+                          id="email_biz"
+                          disabled
+                          placeholder="contact@clinica-popescu.ro"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          for="telefon_biz"
+                          class="block text-sm font-medium text-gray-700"
+                          >Telefon</label
+                        >
+                        <input
+                          type="tel"
+                          id="telefon_biz"
+                          disabled
+                          placeholder="+40 7XX XXX XXX"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          for="site_web"
+                          class="block text-sm font-medium text-gray-700"
+                          >Site Web (Opțional)</label
+                        >
+                        <input
+                          type="url"
+                          id="site_web"
+                          disabled
+                          placeholder="https://clinica-popescu.ro"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                        />
+                      </div>
+                    </div>
+                    <div class="space-y-4">
+                      <h4 class="text-lg font-medium text-gray-800">Locație</h4>
+                      <div>
+                        <label
+                          for="adresa"
+                          class="block text-sm font-medium text-gray-700"
+                          >Adresă Completă</label
+                        >
+                        <input
+                          type="text"
+                          id="adresa"
+                          disabled
+                          placeholder="Str. Observatorului, Nr. 1, Cluj-Napoca"
+                          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                        />
+                      </div>
+                      <div
+                        class="h-40 bg-gray-200 rounded-md flex items-center justify-center text-gray-500"
+                      >
+                        [Hartă interactivă - pin location]
+                      </div>
+                      <div>
+                        <label
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >Acoperire Geografică</label
+                        >
+                        <div class="flex space-x-4">
+                          <div class="flex items-center">
+                            <input
+                              type="checkbox"
+                              disabled
+                              checked
+                              class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                            /><label class="ml-2 text-sm">Doar la sediu</label>
+                          </div>
+                          <div class="flex items-center">
+                            <input
+                              type="checkbox"
+                              disabled
+                              class="h-4 w-4 rounded border-gray-300"
+                            /><label class="ml-2 text-sm">La domiciliu</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="border-t-2 border-primary-200 pt-6">
+                  <legend
+                    class="text-xl font-semibold text-primary-700 px-3 -ml-3"
+                  >
+                    🏷️ STEP 3: Categorie & Servicii
+                  </legend>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                      <label
+                        for="categorie"
+                        class="block text-sm font-medium text-gray-700"
+                        >Categorie Principală</label
+                      >
+                      <select
+                        id="categorie"
+                        disabled
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                      >
+                        <option selected>Sănătate & Medicină</option>
+                        <option>Auto & Transport</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label
+                        for="subcategorie"
+                        class="block text-sm font-medium text-gray-700"
+                        >Subcategorie</label
+                      >
+                      <select
+                        id="subcategorie"
+                        disabled
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-50"
+                      >
+                        <option selected>Stomatologie</option>
+                        <option>Oftalmologie</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mt-6">
+                    <h4 class="text-lg font-medium text-gray-800">
+                      Servicii Oferite
+                    </h4>
+                    <div
+                      class="p-4 border border-gray-200 rounded-lg mt-2 space-y-4 bg-gray-50"
+                    >
+                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <input
+                          type="text"
+                          disabled
+                          value="Consultație Stomatologică"
+                          class="rounded-md border-gray-300 shadow-sm bg-white"
+                        />
+                        <input
+                          type="text"
+                          disabled
+                          value="150"
+                          class="rounded-md border-gray-300 shadow-sm bg-white"
+                          placeholder="Preț (RON)"
+                        />
+                        <input
+                          type="text"
+                          disabled
+                          value="30"
+                          class="rounded-md border-gray-300 shadow-sm bg-white"
+                          placeholder="Durată (min)"
+                        />
+                      </div>
+                      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <input
+                          type="text"
+                          disabled
+                          value="Detartraj Profesional"
+                          class="rounded-md border-gray-300 shadow-sm bg-white"
+                        />
+                        <input
+                          type="text"
+                          disabled
+                          value="300"
+                          class="rounded-md border-gray-300 shadow-sm bg-white"
+                          placeholder="Preț (RON)"
+                        />
+                        <input
+                          type="text"
+                          disabled
+                          value="60"
+                          class="rounded-md border-gray-300 shadow-sm bg-white"
+                          placeholder="Durată (min)"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      disabled
+                      class="mt-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 opacity-50"
+                    >
+                      + Adaugă Serviciu
+                    </button>
+                  </div>
+                </fieldset>
+
+                <fieldset class="border-t-2 border-primary-200 pt-6">
+                  <legend
+                    class="text-xl font-semibold text-primary-700 px-3 -ml-3"
+                  >
+                    📅 STEP 4: Program & Disponibilitate
+                  </legend>
+                  <div class="mt-6 space-y-3">
+                    <h4 class="text-lg font-medium text-gray-800">
+                      Program de Lucru
+                    </h4>
+                    <div
+                      class="flex flex-wrap items-center justify-between gap-2 p-3 bg-gray-50 rounded-md"
+                    >
+                      <label class="w-16 font-medium text-gray-700"
+                        >Luni:</label
+                      >
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="time"
+                          disabled
+                          value="08:00"
+                          class="w-28 rounded-md border-gray-300 shadow-sm bg-white"
+                        />
+                        <span>-</span>
+                        <input
+                          type="time"
+                          disabled
+                          value="18:00"
+                          class="w-28 rounded-md border-gray-300 shadow-sm bg-white"
+                        />
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="checkbox"
+                          disabled
+                          class="h-4 w-4 rounded border-gray-300"
+                        /><label class="ml-2 text-sm text-gray-600"
+                          >Liber</label
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-wrap items-center justify-between gap-2 p-3 bg-gray-50 rounded-md"
+                    >
+                      <label class="w-16 font-medium text-gray-700"
+                        >Marți:</label
+                      >
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="time"
+                          disabled
+                          value="08:00"
+                          class="w-28 rounded-md border-gray-300 shadow-sm bg-white"
+                        />
+                        <span>-</span>
+                        <input
+                          type="time"
+                          disabled
+                          value="18:00"
+                          class="w-28 rounded-md border-gray-300 shadow-sm bg-white"
+                        />
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="checkbox"
+                          disabled
+                          class="h-4 w-4 rounded border-gray-300"
+                        /><label class="ml-2 text-sm text-gray-600"
+                          >Liber</label
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-wrap items-center justify-between gap-2 p-3 bg-red-50 rounded-md"
+                    >
+                      <label class="w-16 font-medium text-gray-700"
+                        >Duminică:</label
+                      >
+                      <div class="flex items-center space-x-2">
+                        <input
+                          type="time"
+                          disabled
+                          class="w-28 rounded-md border-gray-300 shadow-sm opacity-50 bg-white"
+                        />
+                        <span>-</span>
+                        <input
+                          type="time"
+                          disabled
+                          class="w-28 rounded-md border-gray-300 shadow-sm opacity-50 bg-white"
+                        />
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          type="checkbox"
+                          disabled
+                          checked
+                          class="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500"
+                        /><label class="ml-2 text-sm font-semibold text-red-600"
+                          >Închis</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </article>
+        </section>
+
+        <section id="continuare" class="mt-16 scroll-mt-20">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 border-b-4 border-yellow-400 pb-4"
+          >
+            4. Arhitectura Categoriilor de Servicii
+          </h2>
+          <div
+            class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 p-6 rounded-r-lg shadow-lg mt-8"
+          >
+            <h3 class="text-xl font-bold mb-2 flex items-center">
+              <svg
+                class="w-6 h-6 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                ></path>
+              </svg>
+              Conținutul lipsește
+            </h3>
+            <p class="mt-4">Urmeaza continuarea detaliior pentru:</p>
+            <ul class="list-disc list-inside mt-2 font-medium space-y-1">
+              <li>4. Arhitectura Categoriilor de Servicii</li>
+              <li>5. Customer Journey - Utilizatori Finali</li>
+              <li>6. Sistemul de Rezervări & Integrări Calendar</li>
+              <li>7. Ecosistemul de Review-uri</li>
+              <li>8. Gamification & Economia Punctelor</li>
+              <li>9. Management Dashboard Furnizori</li>
+              <li>10. Rolul AI în Ecosistem</li>
+              <li>11. Business Model & Revenue Streams</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral py-12 px-4 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center space-x-9 mb-4">
+              <div class="relative inline-flex items-center justify-center">
+                <i data-lucide="search" class="w-10 h-10 text-white"></i>
+                <div
+                  class="absolute top-2 left-1 flex gap-0.5 transform scale-75"
+                >
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                  <i
+                    data-lucide="star"
+                    class="w-3 h-3 fill-primary text-primary"
+                  ></i>
+                </div>
+              </div>
+              <span class="text-xl font-bold text-white"
+                >TopZonal<span class="text-primary">.ro</span></span
+              >
+            </div>
+            <p class="text-gray-400 text-sm">
+              Revoluționăm serviciile locale cu tehnologie modernă
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Platformă</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="index.html#home" class="hover:text-primary transition"
+                  >Despre Noi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#features"
+                  class="hover:text-primary transition"
+                  >Funcționalități</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#benefits"
+                  class="hover:text-primary transition"
+                  >Viziune</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#roadmap"
+                  class="hover:text-primary transition"
+                  >Roadmap</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Resurse</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="whitepaper.html" class="hover:text-primary transition"
+                  >Whitepaper</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-primary transition">API</a></li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Suport</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Status</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4 text-white">Legal</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a href="#" class="hover:text-primary transition">Termeni</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition"
+                  >Confidențialitate</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">GDPR</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm"
+        >
+          <p>© 2025 TopZonal.ro. Toate drepturile rezervate.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
